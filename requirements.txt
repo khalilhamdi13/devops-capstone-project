@@ -1,0 +1,8 @@
+flask
+flask-restx
+flask-cors
+flask-talisman
+pytest
+pytest-cov
+flake8
+pylint
