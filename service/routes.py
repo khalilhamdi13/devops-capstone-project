@@ -49,7 +49,6 @@ class AccountResource(Resource):
 
         return {"message": "Account not found"}, 404
 
-
     def put(self, id):
         """
         Update an account
@@ -64,7 +63,6 @@ class AccountResource(Resource):
                 return account.to_dict()
 
         return {"message": "Account not found"}, 404
-
 
     def delete(self, id):
         """
