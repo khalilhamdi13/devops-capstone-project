@@ -1,0 +1,15 @@
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata:
+  name: accounts-pipeline
+spec:
+  workspaces:
+    - name: source
+
+  tasks:
+    - name: run-tests
+      taskRef:
+        name: accounts-test
+      workspaces:
+        - name: source
+          workspace: source

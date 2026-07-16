@@ -76,7 +76,7 @@ class TestAccounts(unittest.TestCase):
 
         response = self.app.delete("/accounts/1")
 
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 204)
 
 
 if __name__ == "__main__":

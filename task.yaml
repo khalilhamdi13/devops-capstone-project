@@ -1,0 +1,16 @@
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: accounts-test
+spec:
+  workspaces:
+  - name: source
+
+  steps:
+  - name: test
+    image: python:3.11-slim
+    workingDir: /workspace/source
+    script: |
+      #!/bin/bash
+      pip install -r requirements.txt
+      pytest

@@ -71,6 +71,6 @@ class AccountResource(Resource):
         for account in Account.accounts:
             if account.id == id:
                 Account.accounts.remove(account)
-                return {"message": "Account deleted"}
+                return "", 204
 
         return {"message": "Account not found"}, 404
